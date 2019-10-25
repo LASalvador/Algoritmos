@@ -8,10 +8,14 @@ int swap(int array[], int firstIndex, int secondIndex)
     array[secondIndex] = temp;
 }
 int bubbleSort(int array[], int tamanho) {
-    for (int i = 0; i < tamanho; ++i)
+	int aux = tamanho - 1;
+    for (int j = 0; j < tamanho; ++j)
     {
-    	if(array[i] > array[i+1]) {
-    		swap(array, i, i+1);
+    	for (int i = 0; i < aux ; ++i)
+    	{
+    		if(array[i] > array[i+1]) {
+    			swap(array, i, i+1);
+    		}
     	}
     }
 }
